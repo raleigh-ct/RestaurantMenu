@@ -9,23 +9,26 @@ public class MenuItem {
     protected String menuItemDescription;
     protected String menuCategory;
     protected LocalDate menuItemCreateDate;
+    protected double price;
 
     // constructors
 
-    public MenuItem(int menuItemId, String menuItemName, String menuItemDescription, String menuCategory) {
+    public MenuItem(int menuItemId, String menuItemName, String menuItemDescription, String menuCategory, double price) {
         this.menuItemId = menuItemId;
         this.menuItemName = menuItemName;
         this.menuItemDescription = menuItemDescription;
         this.menuCategory = menuCategory;
         this.menuItemCreateDate = LocalDate.now();
+        this.price = price;
     }
 
-    public MenuItem(int menuItemId, String menuItemName, String menuCategory) {
+    public MenuItem(int menuItemId, String menuItemName, String menuCategory, double price) {
         this.menuItemId = menuItemId;
         this.menuItemName = menuItemName;
         this.menuItemDescription = "Description Unavailable";
         this.menuCategory = menuCategory;
         this.menuItemCreateDate = LocalDate.now();
+        this.price = price;
     }
 
     public String showItemStatus() {
