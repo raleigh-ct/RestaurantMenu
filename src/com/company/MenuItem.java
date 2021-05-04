@@ -1,6 +1,7 @@
 package com.company;
 import java.util.Date;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 public class MenuItem {
     // fields
@@ -36,9 +37,9 @@ public class MenuItem {
         LocalDate lastMonth = menuItemCreateDate.plusMonths(1);
         int compare = lastMonth.compareTo(date);
         if (compare > 0) {
-            return "New";
+            return "NEW";
         } else {
-            return "Existing";
+            return "Long time favorite";
         }
     }
 
